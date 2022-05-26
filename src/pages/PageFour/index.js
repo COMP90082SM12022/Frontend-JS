@@ -453,11 +453,11 @@ class PageFour extends React.Component {
                             Export
                         </Button>
 						&nbsp;&nbsp;<br/>
-                        <Button variant="contained" color="primary" size="small" ><a style="text-decoration:none"  href="http://127.0.0.1:8000/downloads/palnimation.zip" download="download.zip">Downloading PNG</a></Button>
+                        <Button variant="contained" color="primary" size="small" ><a style={{textDecoration: 'none'}}  href="http://127.0.0.1:8000/downloads/palnimation.zip" download="download.zip">Downloading PNG</a></Button>
 						&nbsp;&nbsp;<br/>
-                        <Button variant="contained" color="primary" size="small" ><a style="text-decoration:none" href="http://127.0.0.1:8000/downloads/palnimation.mp4" download="download.mp4">Downloading MP4</a></Button>
+                        <Button variant="contained" color="primary" size="small" ><a style={{textDecoration: 'none'}} href="http://127.0.0.1:8000/downloads/palnimation.mp4" download="download.mp4">Downloading MP4</a></Button>
 						&nbsp;&nbsp;<br/>
-                        <Button variant="contained" color="primary" size="small" ><a style="text-decoration:none" href="http://127.0.0.1:8000/downloads/palnimation.gif" download="download.gif">Downloading GIF</a></Button>
+                        <Button variant="contained" color="primary" size="small" ><a style={{textDecoration: 'none'}} href="http://127.0.0.1:8000/downloads/palnimation.gif" download="download.gif">Downloading GIF</a></Button>
                     </div>
                     <GoalScreen sprites={sprites} subGoal={subGoal} selectedSubGoals={this.state.selectedSubGoals}
                       showKey={this.state.showKey} onSubItemClick={this.handleSubItemClick} onSubgoalStepItemClick={this.handleSubgoalStepItemClick}/>
