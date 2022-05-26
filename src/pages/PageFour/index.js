@@ -366,7 +366,7 @@ class PageFour extends React.Component {
         this.stepItem[index].current.scrollIntoView();
     }
 
-   handlePNGClick = (this) =>{
+   handlePNGClick = () =>{
         const data = textContent;
         const formData = new FormData();
 	Object.keys(data).forEach((key) => {
@@ -377,8 +377,8 @@ class PageFour extends React.Component {
 	formData.forEach((value, key) => objData[key] =value);
 	//const jsonStr = JSON.stringify(objData);
 	const uuid = objData[user_id];
-	
-	this.setAttribute("href", "http://127.0.0.1:8000/download/" + uuid + "/planimation.zip");
+	var obj = document.getElementById("pngbutton");
+	obj.setAttribute("href", "http://127.0.0.1:8000/download/" + uuid + "/planimation.zip");
     }
 
    handleGIFClick = (this) =>{
@@ -392,8 +392,8 @@ class PageFour extends React.Component {
         formData.forEach((value, key) => objData[key] =value);
         //const jsonStr = JSON.stringify(objData);
         const uuid = objData[user_id];
-
-        this.setAttribute("href", "http://127.0.0.1:8000/download/" + uuid + "/planimation.gif");
+	var obj = document.getElementById("gifbutton");
+        obj.setAttribute("href", "http://127.0.0.1:8000/download/" + uuid + "/planimation.gif");
     }
 
     handleMP4Click = (this) =>{
@@ -407,8 +407,8 @@ class PageFour extends React.Component {
         formData.forEach((value, key) => objData[key] =value);
         //const jsonStr = JSON.stringify(objData);
         const uuid = objData[user_id];
-
-        this.setAttribute("href", "http://127.0.0.1:8000/download/" + uuid + "/planimation.mp4");
+	var obj = document.getElementById("mp4button");
+        obj.setAttribute("href", "http://127.0.0.1:8000/download/" + uuid + "/planimation.mp4");
     }	
     
 
@@ -497,11 +497,11 @@ class PageFour extends React.Component {
                             Export
                         </Button>
 						&nbsp;&nbsp;<br/>
-                        <Button variant="contained" color="primary" size="small" onClick={(this)=> {this.handlePNGClick()}} ><a style={{textDecoration: 'none'}}  href="" download="download.zip">Downloading PNG</a></Button>
+                        <Button variant="contained" color="primary" id="pngbutton" size="small" onClick={()=> {this.handlePNGClick()}} ><a style={{textDecoration: 'none'}}  href="" download="download.zip">Downloading PNG</a></Button>
 						&nbsp;&nbsp;<br/>
-			<Button variant="contained" color="primary" size="small" onClick={(this)=> {this.handleGIFClick()}} ><a style={{textDecoration: 'none'}}  href="" download="download.gif">Downloading GIF</a></Button>
+			<Button variant="contained" color="primary" id="gifbutton" size="small" onClick={()=> {this.handleGIFClick()}} ><a style={{textDecoration: 'none'}}  href="" download="download.gif">Downloading GIF</a></Button>
 						&nbsp;&nbsp;<br/>
-			<Button variant="contained" color="primary" size="small" onClick={(this)=> {this.handleMP4Click()}} ><a style={{textDecoration: 'none'}}  href="" download="download.mp4">Downloading MP4</a></Button>
+			<Button variant="contained" color="primary" id="mp4button" size="small" onClick={()=> {this.handleMP4Click()}} ><a style={{textDecoration: 'none'}}  href="" download="download.mp4">Downloading MP4</a></Button>
                     </div>
                     <GoalScreen sprites={sprites} subGoal={subGoal} selectedSubGoals={this.state.selectedSubGoals}
                       showKey={this.state.showKey} onSubItemClick={this.handleSubItemClick} onSubgoalStepItemClick={this.handleSubgoalStepItemClick}/>
