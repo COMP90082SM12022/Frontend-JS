@@ -368,29 +368,31 @@ class PageFour extends React.Component {
 
    handlePNGClick = () =>{
         const data = textContent;
-        const formData = new FormData();
-	Object.keys(data).forEach((key) => {
-  	    formData.append(key, data[key]);
-	});
+        //const formData = new FormData();
+	//Object.keys(data).forEach((key) => {
+  	//    formData.append(key, data[key]);
+	//});
 
-	let objData= {};
-	formData.forEach((value, key) => objData[key] =value);
+	//let objData= {};
+	//formData.forEach((value, key) => objData[key] =value);
 	//const jsonStr = JSON.stringify(objData);
-	const uuid = objData[user_id];
+	var objData = JSON.parse(data);
+	const uuid = objData['user_id‘];
 	var obj = document.getElementById("pngbutton");
 	obj.setAttribute("href", "http://127.0.0.1:8000/download/" + uuid + "/planimation.zip");
     }
 
    handleGIFClick = () =>{
         const data = textContent;
-        const formData = new FormData();
-        Object.keys(data).forEach((key) => {
-            formData.append(key, data[key]);
-        });
+        //const formData = new FormData();
+        //Object.keys(data).forEach((key) => {
+        //    formData.append(key, data[key]);
+        //});
         
-        let objData= {};
-        formData.forEach((value, key) => objData[key] =value);
+        //let objData= {};
+        //formData.forEach((value, key) => objData[key] =value);
         //const jsonStr = JSON.stringify(objData);
+ 	var objData = JSON.parse(data);
         const uuid = objData[user_id];
 	var obj = document.getElementById("gifbutton");
         obj.setAttribute("href", "http://127.0.0.1:8000/download/" + uuid + "/planimation.gif");
@@ -398,15 +400,16 @@ class PageFour extends React.Component {
 
     handleMP4Click = () =>{
         const data = textContent;
-        const formData = new FormData();
-        Object.keys(data).forEach((key) => {
-            formData.append(key, data[key]);
-        });
+        //const formData = new FormData();
+        //Object.keys(data).forEach((key) => {
+        //    formData.append(key, data[key]);
+        //});
         
-        let objData= {};
-        formData.forEach((value, key) => objData[key] =value);
+        //let objData= {};
+        //formData.forEach((value, key) => objData[key] =value);
         //const jsonStr = JSON.stringify(objData);
-        const uuid = objData[user_id];
+	var objData = JSON.parse(data);
+        const  uuid = objData[user_id];
 	var obj = document.getElementById("mp4button");
         obj.setAttribute("href", "http://127.0.0.1:8000/download/" + uuid + "/planimation.mp4");
     }	
