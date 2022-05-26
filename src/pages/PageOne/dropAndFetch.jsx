@@ -45,7 +45,7 @@ export default function DropAndFetch({ onStore, onClick, newURL }) {
     try {
       setLoading(true);
       const resp = await fetch(
-        "http://127.0.0.1:8000/upload/pddl",
+        "https://planimation.planning.domains/upload/pddl",
         {
           //"http://127.0.0.1:8000/upload/pddl" On local server
           method: "POST", //DO NOT use headers
