@@ -381,7 +381,7 @@ class PageFour extends React.Component {
 	obj.setAttribute("href", "http://127.0.0.1:8000/download/" + uuid + "/planimation.zip");
     }
 
-   handleGIFClick = (this) =>{
+   handleGIFClick = () =>{
         const data = textContent;
         const formData = new FormData();
         Object.keys(data).forEach((key) => {
@@ -396,7 +396,7 @@ class PageFour extends React.Component {
         obj.setAttribute("href", "http://127.0.0.1:8000/download/" + uuid + "/planimation.gif");
     }
 
-    handleMP4Click = (this) =>{
+    handleMP4Click = () =>{
         const data = textContent;
         const formData = new FormData();
         Object.keys(data).forEach((key) => {
